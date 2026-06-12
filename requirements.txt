@@ -5,6 +5,7 @@ python-multipart
 firebase-admin
 beautifulsoup4
 httpx
+fastapi[standard]
 google
 google-genai
 email-validator
