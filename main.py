@@ -16,17 +16,17 @@ from email.message import EmailMessage
 from typing import List,Dict
 # Firebase initialization
 # Get base64-encoded credentials from env
- firebase_b64 = os.getenv("FIREBASE_CREDENTIALS")
+firebase_b64 = os.getenv("FIREBASE_CREDENTIALS")
  
- if firebase_b64:
-     decoded = base64.b64decode(firebase_b64).decode("utf-8")
-     with open("credentials.json", "w") as f:
-         f.write(decoded)
+if firebase_b64:
+    decoded = base64.b64decode(firebase_b64).decode("utf-8")
+    with open("credentials.json", "w") as f:
+        f.write(decoded)
  
-     cred = credentials.Certificate("credentials.json")
-     firebase_admin.initialize_app(cred)
- else:
-     raise Exception("FIREBASE_CREDENTIALS not found in environment")
+    cred = credentials.Certificate("credentials.json")
+    firebase_admin.initialize_app(cred)
+else:
+    raise Exception("FIREBASE_CREDENTIALS not found in environment")
 
 # cred = credentials.Certificate('credentials.json')  # Path to your Firebase credentials JSON file
 # firebase_admin.initialize_app(cred)
