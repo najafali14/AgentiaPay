@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+firebase-admin
+beautifulsoup4
+httpx
+google
+google-genai
+email-validator
